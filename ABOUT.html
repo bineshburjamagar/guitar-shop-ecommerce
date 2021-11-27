@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>About us</title>
+	<link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+	
+<h1>About Us</h1>
+<h2> Guitar Shop is an online guitar shopping destination in Nepal offering wide range of guitar products whereby the customer can enjoy a hassle free purchase of products which is now just a click away from reaching to their doorstep. Our mission is to provide best guitars from the world in reasonable price.</h2>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <img src="images/slide1.jpg" style="width:100% ">
+</div>
+
+<div class="mySlides fade">
+  <img src="images/slide2.jpg" style="width:100% ">
+</div>
+
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 3000); // Change image every 3 seconds
+}
+</script>
+
+</body>
+</html>

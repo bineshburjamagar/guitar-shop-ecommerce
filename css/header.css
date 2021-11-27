@@ -1,0 +1,25 @@
+label.logo{
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+.cartbtn{
+    width: 100px;
+    height: 50px;
+    background-color: white;
+}
+a.active,a:hover{
+    background: #000000;
+    transform: .5s ;
+}
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+    

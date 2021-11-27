@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Contact Us </title>
+	<link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+	<form id="contactform" class="contact-form">
+		<h4>Fill up the form here so we can contact you</h4>
+		<div class="txtb">
+			<label>First name :</label>
+			<input type="Full name" id="fname" name="value" placeholder="Enter your first name" style="padding: 10px ; width: 600">
+		</div>
+		<div class="txtb">
+			<label>Middle Name :</label>
+			<input type="Middle Name  " id="mname" name="value" placeholder="Enter your middle name " style="padding: 10px ; width: 600">
+		</div>
+		<div class="txtb">
+			<label>last name :</label>
+			<input type="Full name " id="lname" name="value" placeholder="Enter your last name" style="padding: 10px ; width: 600">
+		</div>
+		<div class="txtb">
+			<label>Email Address:</label>
+			<input type="email " id="email" name="value" placeholder="Enter your email" style="padding: 10px ; width: 600">
+		</div>
+		<div class="txtb">
+			<label>Contact Number :</label>
+			<input type="Phone Number  " id="phone" name="value" placeholder="Enter your phone number " style="padding: 10px ; width: 600">
+		</div>
+			<input type="submit" value ="submit" style="padding: 10px; width: 100px ; background-color: green; font-weight: lighter;">
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		//Select Elements
+		function $(elem){
+			return document.querySelector(elem);
+		}
+		
+		let fo = $("#contactform");
+		let fn = $("#fname");
+		let mn = $("#mname");
+		let ln = $("#lname");
+		let em = $("#email");
+		let ph = $("#phone");
+	
+
+
+		if(localStorage.formdata === undefined){
+			localStorage.setItem('formdata', JSON.stringify([]));
+		}
+
+		//Storing data as an object
+		let cd = JSON.parse(localStorage.getItem('formdata'));
+
+		fo.addEventListener('submit', e => {
+			e.preventDefault();
+			let d = {
+				'firstname': fn.value,
+				'middlename': mn.value,
+				'lastname': ln.value,
+				'email': em.value,
+				'phone': ph.value,
+				'message': ms.value
+			};
+
+			cd.push(d);
+			localStorage.setItem('formdata', JSON.stringify(cd));
+			e.target.reset();
+		})
+
+	</script>
+
+</body>
+</html>
